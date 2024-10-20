@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize');
 const Service = require('./service');
-const User = require('./user');
+const User = require('./User');
 const Plan = require('./plan');
 const UserPlan = require('./userPlan');
 const Order = require('./order');
