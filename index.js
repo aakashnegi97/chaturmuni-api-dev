@@ -16,6 +16,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api', routes);
+app.get('/', (req, res) => {
+    res.status(200).json({
+        status: "Running",
+    })
+});
 
 // Error Middleware
 app.use((err, req, res, next) => {
