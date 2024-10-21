@@ -1,5 +1,5 @@
-# Use the official Node.js image from Docker Hub
-FROM node:14
+# Use the official Node.js image from Docker Hub (Node.js 20)
+FROM node:20.17.0
 
 # Set the working directory inside the container
 WORKDIR /usr/src/app
@@ -12,6 +12,9 @@ RUN npm install
 
 # Copy the rest of the application code
 COPY . .
+
+# Copy the .env_dev file from the env directory to the working directory as .env
+COPY env/.env_dev .env
 
 # Expose the port the app runs on
 EXPOSE 8000
